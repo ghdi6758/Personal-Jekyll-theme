@@ -21,8 +21,20 @@
 
           <br class="visible-xs-block">
           <em><small><a href="{{site.baseurl}}}#disqus_thread"><strong>{{ pub.conference }}</strong></a></small></em><br/>
-          <a href="whisper.pdf" class="btn btn-primary btn-xs" style="margin-top:10px;">PDF</a>
-          <a href="imc_2014.pptx" class="btn btn-primary btn-xs"style="margin-top:10px;">Slides</a>
+          {% if pub.url_pdf %}
+            <a href= {{ pub.url_pdf }} class="btn btn-primary btn-xs" style="margin-top:10px;">PDF</a>
+          {% endif %}
+          {% if pub.url_slide %}
+            <a href= {{ pub.url_slide }} class="btn btn-primary btn-xs"style="margin-top:10px;">Slides</a>
+          {% endif %}
+          {% if pub.url_poster %}
+            <a href= {{ pub.url_poster }} class="btn btn-primary btn-xs"style="margin-top:10px;">Poster</a>
+          {% endif %}
+          {% if pub.url_video %}
+            <a href= {{ pub.url_video }} class="btn btn-primary btn-xs"style="margin-top:10px;">Video</a>
+          {% endif %}
+          
+          
         </h4>
             
         </div>
